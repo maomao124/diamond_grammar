@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo message="*******************install-or-package*******************"/>
+  <mkdir dir="H:\程序\大三上期\菱形语法/target/classes"/>
+  <copy todir="H:\程序\大三上期\菱形语法\target/classes" overwrite="true">
+    <fileset dir="H:\程序\大三上期\菱形语法\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <move file="H:\程序\大三上期\菱形语法\target/classes/菱形语法.jar" tofile="H:\程序\大三上期\菱形语法\target/菱形语法_hide.jar"/>
+  <copy todir="H:\程序\大三上期\菱形语法\target/classes" overwrite="true">
+    <fileset dir="H:\程序\大三上期\菱形语法\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <move file="H:\程序\大三上期\菱形语法\target/classes/菱形语法.jar" tofile="H:\程序\大三上期\菱形语法\target/菱形语法_args.jar"/>
+  <move file="H:\程序\大三上期\菱形语法\target/classes/菱形语法_hide.jar" tofile="H:\程序\大三上期\菱形语法\target/菱形语法_args_save.jar"/>
+  <copy todir="H:/jar包/" overwrite="true">
+    <fileset dir="H:\程序\大三上期\菱形语法\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <copy todir="H:\程序\大三上期\菱形语法\target/" overwrite="true">
+    <fileset dir="H:/jar包/" erroronmissingdir="false">
+      <include name="*.bat"/>
+    </fileset>
+  </copy>
+</target>
+</project>
