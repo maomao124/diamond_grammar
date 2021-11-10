@@ -26,5 +26,10 @@
       <include name="*.bat"/>
     </fileset>
   </copy>
+  <copy todir="H:\程序\大三上期\菱形语法\target/" overwrite="true">
+    <fileset dir="H:/jar包/" erroronmissingdir="false">
+      <include name="jar启动器.7z"/>
+    </fileset>
+  </copy>
 </target>
 </project>
